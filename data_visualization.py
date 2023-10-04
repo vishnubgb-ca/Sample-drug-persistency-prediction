@@ -1,4 +1,5 @@
 import seaborn as sns
+import matplotlib.pyplot as plt
 from data_preprocessing import data_preprocess
 
 def data_visualization():
@@ -8,6 +9,7 @@ def data_visualization():
     sns.countplot(x="Persistency_Flag",hue='Adherent_Flag', data=data)
     sns.countplot(x="Persistency_Flag", hue='Age_Bucket', data=data)
     sns.countplot(x="Persistency_Flag", hue='Gender', data=data)
+    plt.show()
     return data
 
 data_visualization()
