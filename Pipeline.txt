@@ -19,19 +19,19 @@ pipeline{
         }
         stage("Data Visualization"){
             steps{
-                sh 'python3 datavisualization.py'
+                sh 'python3 data_visualization.py'
             }
         }
         stage("Feature Engineering"){
             steps{
-                sh 'python3 feature_engineering.py'
+                sh 'python3 feature_engg.py'
             }
         }
     }
     post{
        
         always {
-            archiveArtifacts artifacts: 'transformer_fault_prediction.csv', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'drug_persistency_prediction.csv', onlyIfSuccessful: true
         }
             }
 }
