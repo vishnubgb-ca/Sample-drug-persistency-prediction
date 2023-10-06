@@ -46,7 +46,7 @@ def feature_engg():
     X_upd, y_upd = sm.fit_resample(X, y.ravel())
     data_new=X_upd
     data_new['Persistency_Flag']=y_upd
-    data_new.to_csv("persistency_prediction.csv")
+    data_new.to_csv("drug_persistency_prediction.csv")
 
 
 
